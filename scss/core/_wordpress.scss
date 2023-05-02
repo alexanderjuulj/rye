@@ -1,0 +1,151 @@
+/* =Alignment (typically of images)
+-------------------------------------------------------------- */
+.alignright,
+a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+.alignnone,
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.alignleft,
+a img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+a img.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+p::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* =Gutenberg align wide theme support
+-------------------------------------------------------------- */
+.alignfull {
+    margin-left: calc(-100vw / 2 + 100% / 2);
+    margin-right: calc(-100vw / 2 + 100% / 2);
+    max-width: 100vw;
+}
+
+/* =Captions
+-------------------------------------------------------------- */
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+
+    &.alignright {
+        margin: 5px 0 20px 20px;
+    }
+    &.alignleft {
+        margin: 5px 20px 20px 0;
+    }
+    &.alignnone {
+        margin: 5px 20px 20px 0;
+    }
+
+    img {
+        border: 0 none;
+        height: auto;
+        margin: 0;
+        max-width: 98.5%;
+        padding: 0;
+        width: auto;
+    }
+
+    p.wp-caption-text {
+        font-size: 11px;
+        line-height: 17px;
+        margin: 0;
+        padding: 0 4px 5px;
+    }
+}
+
+.gallery-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+
+/* =Text meant only for screen readers
+-------------------------------------------------------------- */
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+
+    &:focus {
+        background-color: #eee;
+        clip: auto !important;
+        clip-path: none;
+        color: #444;
+        display: block;
+        font-size: 1em;
+        height: auto;
+        left: 5px;
+        line-height: normal;
+        padding: 15px 23px 14px;
+        text-decoration: none;
+        top: 5px;
+        width: auto;
+        z-index: 100000;
+        /* Above WP toolbar. */
+    }
+}
+
+/* =Image sizes
+-------------------------------------------------------------- */
+.size {
+    &-auto {
+        max-width: 100%;
+        height: auto;
+    }
+    &-full {
+        max-width: 100%;
+        height: auto;
+    }
+    &-large {
+        max-width: 100%;
+        height: auto;
+    }
+    &-medium {
+        max-width: 100%;
+        height: auto;
+    }
+    &-thumbnail {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* =Gutenberg block image
+-------------------------------------------------------------- */
+.wp-block-image {
+    margin-bottom: 0;
+
+    img {
+        height: auto;
+    }
+}
+

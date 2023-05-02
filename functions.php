@@ -23,6 +23,7 @@ function rye_scripts() {
     
     // style.css.
     wp_enqueue_style( 'rye-style', get_template_directory_uri() . '/style.css', array(), wp_get_theme()->get( 'Version' ) );
+    wp_enqueue_style( 'rye-main', get_template_directory_uri() . '/scss/main.css', array(), wp_get_theme()->get( 'Version' ) );
 }
 add_action( 'wp_enqueue_scripts', 'rye_scripts', 10 );
 

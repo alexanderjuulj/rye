@@ -32,6 +32,10 @@ wp-config.php
 # Log files
 *.log
 
+# CodeKit files
+*.codekit3
+*.DS_Store
+
 # htaccess
 /.htaccess
 

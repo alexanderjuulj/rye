@@ -1,0 +1,21 @@
+
+/* =Page setup
+-------------------------------------------------------------- */
+#pageContent {
+    flex: 1 0 auto;
+    z-index:unset;
+    padding: 20px 0;
+}
+
+/* =Footer
+-------------------------------------------------------------- */
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+}

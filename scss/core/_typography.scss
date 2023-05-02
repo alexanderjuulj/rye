@@ -1,0 +1,30 @@
+
+/* =Typography styles
+-------------------------------------------------------------- */
+dl, ol, ul {
+    padding: 0 0 0 20px;
+}
+
+b, strong {
+    font-weight: 700;
+}
+
+
+/* =Blockquotes
+-------------------------------------------------------------- */
+blockquote {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+  
+    > :last-child {
+      margin-bottom: 0;
+    }
+
+    figcaption {
+        font-size: 0.825rem;
+
+        &::before {
+            content: "\2014\00A0"; // em dash, nbsp
+        }
+    }
+}

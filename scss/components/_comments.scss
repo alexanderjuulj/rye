@@ -1,68 +1,162 @@
 /* =Comment styles
 -------------------------------------------------------------- */
-.comment-form p label {
-    display: block;
+.comment {
+    &list {
+    
+        li {
+            article {
+                border: 1px solid rgba(0,0,0,0.15);
+                margin-bottom: 20px;
+                border-radius: 2px;
+                padding: 15px 20px 35px;
+                position: relative;
+                background: #fafafa;
+            }
+        }
+    }
+    &-metadata {
+        font-size: 12px;
+        line-height: 16px;
+        margin: 10px 0 5px;
+
+        a {
+            color: #999;
+        }
+    }
+    &s-area {
+        margin: 40px 0 20px;
+    }
 }
 
-.comment-form p textarea,
-.comment-form p input {
-    padding: 10px 20px;
-    width: 100%;
-    border: 1px solid rgba(0,0,0,0.15);
-    border-radius: 3px;
-    color: #000;
+/* =Comment List
+-------------------------------------------------------------- */
+.commentlist {
+    // A single comment
+    .comment {
+        padding: 1.5rem;
+        background: #f0f2f5;
+        margin: 2rem 0;
+        border-radius: 10px;
+        position: relative;
+
+        &-author {
+            margin-bottom: 1rem;
+            cite {
+                font-style: normal;
+                font-weight: 700;
+                a {
+                    text-decoration: none;
+                    color: #000;
+                }
+            }
+            .avatar {
+                    border-radius: 50%;
+                    overflow: hidden;
+            }
+        }
+        &-meta {
+            position: absolute;
+            bottom: -1.5rem;
+            right: 0;
+            a {
+                text-decoration: none;
+                font-size: .75rem;
+                color: #999;
+            }
+        }
+        &-reply-link {
+            font-size: .875rem;
+            color: purple;
+            text-decoration: none;
+            font-weight: 700;
+
+            &:hover, &:focus, &:active {
+                text-decoration: none;    
+            }
+        }
+        // Nested comments
+        &.depth-1 {
+            background: #f0f2f5;
+            &.even {
+                background: #f0f2f5;
+            }
+        }
+        &.even {
+            background: #fff;
+        }
+    }
 }
 
-.comment-form p.form-submit input {
-    color: #eaeaea;
-    border: none;
-    background-color: #343a40;
+.comment {
+    &-respond {
+        background: #f0f2f5;
+        padding: 1.5rem;
+        border-radius: .625rem;
+    }
+    
+    &-reply-title {
+        display: flex;
+        flex-direction: row;
+        a {
+            text-decoration: none;
+            color: inherit;
+            margin-left: .25rem;
+        }
+        small {
+            a {
+                font-size: .75rem;
+                line-height: 1;
+                font-weight: 400;
+                padding: .5rem;
+                background-color: rgba(0,0,0,0.07);
+                border-radius: .625rem;
+                margin: .25rem 0 0 .5rem;
+            }
+        }
+    }
+
+    &-form {
+        p {
+            label {
+                display: block;
+            }
+            textarea, input {
+                padding: .5rem 1rem;
+                width: 100%;
+                border: 1px solid rgba(0,0,0,0.07);
+                background: #fff;
+                border-radius: .375rem;
+                color: #000;
+            }
+            textarea {
+                height: 6rem;
+            }
+        }
+        .form-submit {
+            input {
+                color: #eaeaea;
+                border: none;
+                background-color: #343a40;
+                
+                &:hover {
+                    cursor: pointer;
+                    color: #ccc;
+                }
+            }
+        }
+        &-cookies-consent {
+            display: flex;
+            justify-content: flex-start;
+
+            #wp-comment-cookies-consent {
+                width: auto;
+                margin-right: .5rem;
+            }
+        }
+    }
 }
 
-.comment-form p.form-submit input:hover {
-    cursor: pointer;
-    color: #ccc;
-}
-
-.commentlist, .commentlist li {
-    list-style: none;
-    padding:0;
-}
-
-.commentlist li article {
-    border: 1px solid rgba(0,0,0,0.15);
-    margin-bottom: 20px;
-    border-radius: 2px;
-    padding: 15px 20px 35px;
-    position: relative;
-    background: #fafafa;
-}
-
-.comment-metadata {
-    font-size: 12px;
-    line-height: 16px;
-    margin: 10px 0 5px;
-}
-
-.comment-metadata a {
-    color: #999;
-}
-
-.comment-reply-link {
-    margin: 15px 0 0;
-    padding: 5px 30px;
-    border: 1px solid #343a40;
-    color: #343a40;
-    border-radius: 20px;
-    text-align: center;
-}
-
-.comment-reply-link:hover, .comment-reply-link:focus, .comment-reply-link:active  {
-    background: #343a40;
-    color: #fff;
-    text-decoration: none;
-}
-
-.comments-area {
-    margin: 40px 0 20px;
+.required-field-message {
+	display: block;
+	font-size: .825rem;
 }
